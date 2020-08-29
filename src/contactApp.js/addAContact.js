@@ -26,7 +26,6 @@ const AddAContact = () => {
         let url= myUrl;
         doApiPost(url+"add",obj)
         .then(data=>{
-            console.log(data);
             if(!data.errors)
             dispatch({type:"updateList",newList:data});
             else

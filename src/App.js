@@ -10,6 +10,7 @@ function App() {
   return (
     <Provider store={myStore}>
       <div className="App">
+      <br/>
         <ContactMain />
       </div>
     </Provider>

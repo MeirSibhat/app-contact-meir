@@ -31,7 +31,6 @@ function MyMsgInfo(props) {
         
         doApiUpdate(url+"edit",obj)
         .then(data=>{
-            console.log(data);
             if(data.errors) 
             alert(data.message)
             else

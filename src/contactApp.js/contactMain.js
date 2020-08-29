@@ -11,7 +11,6 @@ function ContactMain() {
   useEffect(() => {
     doApiGet(myUrl+"all")
     .then(data=>{
-      console.log(data);
       dispatch({type:"updateList",newList:data} );
     })
   },)
