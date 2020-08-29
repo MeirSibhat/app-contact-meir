@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ContactMain from './contactApp.js/contactMain';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { contReducer } from './contactApp.js/reducer/contactReducer';
+// import Test from './contactApp.js/test';
 
+const myStore = createStore(contReducer);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={myStore}>
+      <div className="App">
+        <button className="btn btn-info"> click me </button>
+        <ContactMain />
+   {/* <Test/> */}
+      </div>
+    </Provider>
+
   );
 }
 
 export default App;
+
