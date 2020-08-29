@@ -6,7 +6,7 @@ import { MDBAnimation } from "mdbreact";
 function ContactList(props) {
   let myList = useSelector(state => state.contectList)
   return (
-    <MDBAnimation type="fadeInLeft" delay-3s  >
+    <MDBAnimation type="fadeInLeft" delay-3s="true"  >
       <table className="table table-striped" id="headerTable2">
         <thead>
           <tr>
